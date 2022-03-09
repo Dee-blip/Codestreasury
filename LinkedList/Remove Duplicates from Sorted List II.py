@@ -1,5 +1,6 @@
   def deleteDuplicates(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        dummy =ListNode(-1,head) #dummy node which connects to head of the given linkedlist
+        dummy =ListNode(0) #dummy node which connects to head of the given linkedlist
+        dummy.next=head
         prev=dummy     #we are pointing with the prev to the linkedlist
         while head :  #till the end of the linked list
             if head.next and head.val==head.next.val: # we are checking the element if head next element is present and head.val and head.next.val are same or not
